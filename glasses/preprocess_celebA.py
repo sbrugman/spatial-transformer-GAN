@@ -5,12 +5,12 @@ import argparse
 
 def parse_arguments():
 	parser = argparse.ArgumentParser(description='Celeb A dataset preprocess script')
-	parser.add_argument('celebA_path', type=str, default='celebA', help='The path to the Celeb A dataset. The dataset can be obtained from: http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html.')
+	parser.add_argument('--celebA_path', type=str, default='celebA', help='The path to the Celeb A dataset. The dataset can be obtained from: http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html.')
 	parser.add_argument('--output_path', type=str, default='dataset', help='The path to store the preprocessed dataset.')
 	return parser.parse_args()
 
 
-def preprocess_celeb_a():
+def preprocess_celeb_a(celebA_path, output_path):
 	part_dict = {}
 	with open("{0}/list_eval_partition.txt".format(celebA_path)) as file:
 		for line in file:
