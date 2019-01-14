@@ -46,7 +46,7 @@ def preprocess_celeb_a():
 
 		
 if __name__ == "__main__":
-        args = parse_arguments()
+    args = parse_arguments()
 	preprocess_celeb_a(args.celebA_path, args.output_path)
 
 
